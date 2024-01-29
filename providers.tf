@@ -4,6 +4,15 @@
 terraform {
   # Uncomment and adjust providers version according to your needs
   required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "5.42.0"
+    }
+    tfe = {
+      source  = "hashicorp/tfe"
+      version = "0.51.1"
+    }
+
     # hcp = {
     #   source  = "hashicorp/hcp"
     #   version = "0.67.0"

@@ -13,15 +13,33 @@ variable "default_tags" {
     terraformed = "Do not edit manually."
   }
 }
+variable "github_owner" {
+  type        = string
+  description = "Owner of the Github org"
+}
 
-# Uncomment as needed
+variable "github_token" {
+  type        = string
+  description = "Github token to pass through to mgmt ws"
+}
 
-# variable "HCP_CLIENT_ID" {
-#   type        = string
-#   description = "The OAuth2 Client ID for API operations."
-# }
+variable "tfe_token" {
+  type        = string
+  description = "TFE token to pass through to mgmt ws"
+}
 
-# variable "HCP_CLIENT_SECRET" {
-#   type        = string
-#   description = "The OAuth2 Client Secret for API operations."
-# }
+variable "oauth_token_id" {
+  type        = string
+  description = "Oauth token ID used for associating workspace to VCS"
+}
+
+variable "mgmt_ws_template_prefix" {
+  type        = string
+  description = "String to prefix the archetype name to give mgmt template repo name"
+  default     = "nocode-lz-mgmt-template"
+}
+
+variable "tfc_organization" {
+  type        = string
+  description = "TFC organization"
+}
